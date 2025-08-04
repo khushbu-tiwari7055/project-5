@@ -1,0 +1,167 @@
+/* Basic Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body and font styles */
+body {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  background-color: #ed93c5;
+  padding-top: 70px; /* Offset for sticky navbar */
+}
+
+/* Navigation Bar Styles */
+.navbar {
+  position: sticky;
+  top: 0;
+  background-color: #151515;
+  color: #ed93c5;
+  padding: 15px 0;
+  z-index: 1000;
+  width: 100%;
+  box-shadow: 0 4px 6px #ed93c5;
+}
+
+.navbar ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+}
+
+.navbar li {
+  margin: 0 20px;
+}
+
+.navbar a {
+  color: #ed93c5;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 10px 15px;
+  transition: background-color 0.3s ease;
+  border-radius: 5px;
+}
+
+.navbar a:hover {
+  background-color: #0e0e0e;
+}
+
+/* Content Section Styles */
+.content {
+  padding: 40px 20px;
+}
+
+/* General Section Styles */
+.section {
+  margin: 40px 0;
+  padding: 60px 20px;
+  background-color: #ed93c5;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px #ed93c5;
+}
+
+section h2 {
+  margin-bottom: 20px;
+  text-align: center;
+  color: #0c0c0c;
+}
+
+/* Specific Section Styles */
+.features .feature-item {
+  margin-bottom: 30px;
+}
+
+.features h3 {
+  color: #0c0c0c;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px #ed93c5;
+}
+
+.testimonials .testimonial {
+  margin-bottom: 30px;
+  background-color: #ed93c5;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px #ed93c5;1);
+}
+
+.testimonials h4 {
+  text-align: right;
+  color: #0c0c0c;
+  font-style: italic;
+}
+
+.contact form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contact input,
+.contact textarea {
+  width: 100%;
+  max-width: 600px;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ed93c5;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.contact button {
+  width: 100%;
+  max-width: 600px;
+  padding: 10px;
+  background-color: #050505;
+  color: white;
+  font-size: 18px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contact button:hover {
+  background-color: #121313;
+}
+
+/* Smooth Scroll Behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Responsive Layout */
+@media (max-width: 768px) {
+  .navbar ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .gallery-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .contact form {
+    padding: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+}
